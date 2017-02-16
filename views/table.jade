@@ -1,0 +1,37 @@
+table.table.table-hover.table-condensed.table-bordered(style="margin:20px auto; max-width:100%; max-height:600px;")
+	thead
+		tr  
+			th  Level
+			th  Name
+			th  Sub_url_name
+			th  order
+			th
+	tbody
+		-for(var k in table['links'])
+			-if(table['links'][k] != undefined)     
+				tr(id = "#{k}")
+					td.order #{k}
+					td.order.url(data-id = "#{table.id}") #{table.id}  #{table.name} 
+						div.plus(aria-hidden="true", data-id="#{table.id}" data-level="#{k}" style="cursor:pointer;", align-self="flex-end")
+							i.glyphicon.glyphicon-plus-sign
+					td 
+						div
+							-for(var i=0;i<table['links'][k].length;i++)  
+								div.sub_url(data-id="#{table.links[k][i].sub_url_id}" data-level="#{k}" data-category_id="#{table.id}" ) #{table.links[k][i].sub_url} 
+							div.dropdown.inputs(data-id="#{table.id}" data-level="#{k}")
+								button#dropdownMenu1.btn.btn-primary.dropdown-toggle(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Page Type 
+									span.caret
+								ul.dropdown-menu.scrollable-menu.new(aria-labelledby="dropdownMenu1")
+									-for(var i in populate_url)
+										li.list-group-item(data-id="#{i}") #{i} #{populate_url[i]}
+					td
+						div
+							-for(var i=0;i<table['links'][k].length;i++)  
+								div.order.url_order(data-id="#{table.links[k][i].sub_url_id}",data-level="#{k}" data-category_id="#{table.id}") #{table.links[k][i].order}
+							input.inputs(id="input#{k}" data-id="#{table.id}" data-level="#{k}" type="text")
+					td      
+						div
+							-for(var i=0;i<table['links'][k].length;i++)  
+								div#minus.order(aria-hidden="true" data-level="#{k}" data-order="#{table.links[k][i].order}" data-id="#{table.links[k][i].sub_url_id}", data-category-id ="#{table.id}", onclick = "deleteId(#{table.links[k][i].sub_url_id})")
+									i.glyphicon.glyphicon-remove 
+							input.inputs.okbtn(data-id="#{table.id}" data-level="#{k}" type="button" value="OK") 

@@ -1,0 +1,155 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+table, th, td {
+   border: 0.5px solid black;
+}
+
+.a {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.select_style {
+    border: 1px solid #ccc;
+    width: 120px;
+    border-radius: 3px;
+    color: black;
+    overflow: hidden;
+    background: #fafafa no-repeat 90% 50%;
+}
+.select-style select {
+    padding: 5px 8px;
+    width: 130%;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+}
+.select-style select:focus {
+    outline: none;
+}
+
+
+#list {
+    dispalay : none;
+}
+
+.scrollable-menu {
+    height: auto;
+    max-height: 500px;
+    max-width: 1000px;
+    overflow-x: hidden;
+}
+
+.sub_url, .url {
+    max-width:98%;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    padding:5px; 
+    font-size:12px;
+    color:#666;
+}
+
+
+
+.order{
+    position: relative;
+    text-overflow:ellipsis;
+    padding:5px; 
+    font-size:12px; 
+    color:#666;
+}
+
+.plus{
+    position: absolute;
+    bottom: 2px;
+    right: 4px;
+}
+
+.inputs{
+    display: none;
+    position: relative;
+}
+
+.okbtn{
+    padding: 5px;
+    border-style; solid;
+}
+
+.new{
+    font-size: 12px;
+}
+
+.url_table{
+    padding:5px; 
+    font-size:12px; 
+    color:#666;
+    width:100%;
+}
+
+.listing{
+    position:absolute;
+    left:120%;
+    top: -6%;
+}
+
+#templatetable{
+    max-width: 50%;
+    position:relative;
+    display:inline-block;
+    text-overflow:ellipsis;
+    overflow:hidden;
+}
+
+#listingtable{
+    max-width: 50%;
+    position: fixed;
+    display:inline-block;
+    right:2;
+    top:2;
+    width:50%;
+    text-overflow:ellipsis;
+    overflow:hidden;
+}
+
+.template_rows{
+    background-color: white;
+}
+
+.selected_rows{
+    background-color: red;
+}
+
+.undo_btn{
+    margin-left: 10px;
+}
+
+#minus{
+    cursor:pointer;
+}
+
+.drop{
+    display:none;
+    max-width: 50%;
+    text-overflow:ellipsis;
+}
+
+.savebtn{
+    max-width: 50%;
+    display:inline-block;
+    text-overflow:ellipsis;
+
+}

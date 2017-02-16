@@ -1,0 +1,27 @@
+table.table.table-hover
+	thead
+		tr
+			th Level
+			th URL
+			th Sub_url_category_id
+			th
+	tbody
+		-for(var i in url_table)
+			-if(url_table[i] != undefined)
+				tr
+					td.order.sub_url #{i}
+						div.plus(aria-hidden="true", style="cursor:pointer;", align-self="flex-end")
+							i.glyphicon.glyphicon-plus-sign
+					td.url_table.order 
+						div
+							-for(var j in url_table[i])
+								div #{url_table[i][j]['url']}
+					td.url_table.order 
+						div
+							-for(var j in url_table[i])
+								div #{url_table[i][j]['sub_url_category_id']}
+					td.url_table.order
+						div
+							-for(var j in url_table[i])
+								div(aria-hidden="true", style="cursor:pointer;")   
+									i.glyphicon.glyphicon-remove 				

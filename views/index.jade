@@ -1,0 +1,42 @@
+extends layout
+block content
+	div
+		span 
+			div(class="dropdown" style="display:inline-block;") 
+				button(class="btn btn-primary dropdown-toggle" id="citybtn" type="button" data-toggle="dropdown") Select City 
+					span(class="caret")
+				ul(class="dropdown-menu scrollable-menu" id="city" )
+					-for(var i=0;i<populate_cities.length;i++)
+						li(class="list-group-item" data-id="#{populate_cities[i].id}") #{populate_cities[i].id} #{populate_cities[i].name}
+
+		span(style = "display:none;")   
+			div(class="dropdown" style="display:inline-block;")
+				button(class="btn btn-primary dropdown-toggle" id="suburbbtn" type="button" data-toggle="dropdown") Select Suburb
+					span(class="caret")
+				ul(class="dropdown-menu scrollable-menu" id="suburb")
+					
+		span(style = "display:none;") 
+			div(class="dropdown" style="display:inline-block;")
+				button(class="btn btn-primary dropdown-toggle" id="localitybtn" type="button" data-toggle="dropdown") Select Locality
+					span(class="caret")
+				ul(class="dropdown-menu scrollable-menu" id="locality" )
+					
+		span(style = "display:none;") 
+			div(class="dropdown" style="display:inline-block;")
+				button(class="btn btn-primary dropdown-toggle" id="projectbtn" type="button" data-toggle="dropdown") Select Project
+					span(class="caret")
+				ul(class="dropdown-menu scrollable-menu" id="projects" )
+
+		span(style = "display:none;") 
+			div(class="dropdown" style="display:inline-block;")
+				button(class="btn btn-primary dropdown-toggle" id="propertybtn" type="button" data-toggle="dropdown") Select Property
+					span(class="caret")
+				ul(class="dropdown-menu scrollable-menu" id="property" )
+				
+
+	br
+	br          
+
+	div#templatetable
+	div#listingtable
+

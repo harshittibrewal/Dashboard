@@ -1,0 +1,21 @@
+extends layout
+block content	
+	p Select Page Template
+	div
+		div#DROP.dropdown.drop
+			button#dropdownMenu1.btn.btn-default.dropdown-toggle(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Page Type 
+				span.caret
+			ul(class="dropdown-menu scrollable-menu" id="url" aria-labelledby="dropdownMenu1")
+				-for(var i=0;i<populate_url.length;i++)
+					li.list-group-item(data-id="#{populate_url[i].id}") #{populate_url[i].name}
+		div.container
+			input#search.typeahead(type="text" placeholder="Template Name")
+
+		div.savebtn.pull-right
+			button.btn.btn-success(type="button" onclick = "saveChanges()") Save Changes   
+			button.undo_btn.btn.btn-danger#undo(text="Undo" value = "Undo") Undo
+	div#breadcrumbtable          
+
+	p#status
+
+	

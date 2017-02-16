@@ -1,0 +1,11 @@
+table.table.table-hover.table-condensed.table-bordered(style = "width:250px;")
+	thead
+		tr  
+			th  Template Id
+			th  Template Name
+	tbody(id = "template_table")
+	-for(var i=0;i<templates.length;i++)
+		tr.template_rows(data-id="#{templates[i].id}")
+			td(style="padding:5px; font-size:12px; color:#666;") #{templates[i].id}
+			td(id='template#{i}'  style="padding:5px; font-size:12px; color:#666; position:relative;") #{templates[i].name}
+	
